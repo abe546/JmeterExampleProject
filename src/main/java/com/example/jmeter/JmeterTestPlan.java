@@ -52,7 +52,7 @@ public class JmeterTestPlan {
         csvConfig.setProperty("delimiter", "\\n");
 
         csvConfig.setProperty("variableNames", QUERY_PARAMETER_VAR_NAME);
-        csvConfig.setProperty("recycle", "false");//Reculce input on end of file (set to false)
+        csvConfig.setProperty("recycle", "false");//Recycle input on end of file (set to false)
         csvConfig.setProperty("ignoreFirstLine", "false");//Ignore first line of file
         csvConfig.setProperty("stopThread", true);//Stops thread on EOF
         csvConfig.setProperty("shareMode", "shareMode.thread");
@@ -66,7 +66,6 @@ public class JmeterTestPlan {
         httpHandler.setProtocol("https");
         httpHandler.setPath(path);
         httpHandler.setMethod(httpMethod);
-        httpHandler.setFollowRedirects(true);
         httpHandler.setName("GoogleSearch");
 
         //Adding pieces to enable this to be exported to a .jmx and loaded
@@ -103,8 +102,6 @@ public class JmeterTestPlan {
         HashTree groupTree = hashTree.add(testPlan, setupThreadGroup);
         groupTree.add(httpHandler);
         groupTree.add(csvConfig);
-
-        File jmxToSave = new File("src/main/resources");
 
         //Save this tes plan as a .jmx for future reference
         SaveService.saveTree(hashTree, new FileOutputStream("src/main/resources/jmxFile.jmx"));

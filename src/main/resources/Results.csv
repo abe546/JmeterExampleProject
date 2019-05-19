@@ -1,0 +1,21 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1558305694001,618,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,628,0,1,1,https://google.com/search?q=James,618,0,0
+1558305694623,57,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,636,0,1,1,https://google.com/search?q=Josephine,57,0,0
+1558305694680,51,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,624,0,1,1,https://google.com/search?q=Art,51,0,0
+1558305694732,52,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,628,0,1,1,https://google.com/search?q=Lenna,52,0,0
+1558305694785,47,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,632,0,1,1,https://google.com/search?q=Donette,47,0,0
+1558305694832,52,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,630,0,1,1,https://google.com/search?q=Simona,52,0,0
+1558305694885,49,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,630,0,1,1,https://google.com/search?q=Mitsue,49,0,0
+1558305694935,49,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,628,0,1,1,https://google.com/search?q=Leota,48,0,0
+1558305694984,59,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,626,0,1,1,https://google.com/search?q=Sage,59,0,0
+1558305695043,51,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,626,0,1,1,https://google.com/search?q=Kris,51,0,0
+1558305695095,47,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,628,0,1,1,https://google.com/search?q=Minna,47,0,0
+1558305695142,52,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,626,0,1,1,https://google.com/search?q=Abel,52,0,0
+1558305695194,43,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,628,0,1,1,https://google.com/search?q=Kiley,43,0,0
+1558305695237,55,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,634,0,1,1,https://google.com/search?q=Graciela,55,0,0
+1558305695293,50,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,628,0,1,1,https://google.com/search?q=Cammy,50,0,0
+1558305695343,51,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,630,0,1,1,https://google.com/search?q=Mattie,51,0,0
+1558305695395,46,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,632,0,1,1,https://google.com/search?q=Meaghan,46,0,0
+1558305695441,43,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,630,0,1,1,https://google.com/search?q=Gladys,43,0,0
+1558305695485,44,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,626,0,1,1,https://google.com/search?q=Yuki,44,0,0
+1558305695530,49,GoogleSearch,301,Moved Permanently,GoogleTG 1-1,text,true,,632,0,1,1,https://google.com/search?q=Fletche,49,0,0
