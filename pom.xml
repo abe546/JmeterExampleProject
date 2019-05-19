@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project>
     <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
     <groupId>jmeter-example-project</groupId>
     <artifactId>example-jmeter-with-sdk</artifactId>
@@ -30,6 +33,13 @@
             <version>5.1.1</version>
         </dependency>
 
+
+   <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+   <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.4</version>
+    </dependency>
 
     </dependencies>
 
@@ -59,4 +69,5 @@
     </plugin>
     </plugins>
     </build>
+
 </project>

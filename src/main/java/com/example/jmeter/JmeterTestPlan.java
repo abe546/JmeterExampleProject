@@ -1,3 +1,5 @@
+package com.example.jmeter;
+
 import org.apache.jmeter.config.Arguments;
 import org.apache.jmeter.config.CSVDataSet;
 import org.apache.jmeter.config.gui.ArgumentsPanel;
@@ -25,15 +27,14 @@ import java.io.IOException;
 
 public class JmeterTestPlan
 {
+    public static  final String QUERY_PARAMETER_VAR_NAME = "queryParams";
+
     /**
      * Used to create Jmeter test plan, also saves testplan as a .jmx file
      * in resource folder
      */
-    public void createTestPLan(String inputCSVFile, String domainName, String path, String httpMethod, int threadCount) throws IOException {
-        //Create the Jmeter engine to be used (Similar to Android's GUI engine)
-        StandardJMeterEngine jEngine = new  StandardJMeterEngine();
-
-        JMeterUtils.setJMeterHome("target/jmeter");
+    public HashTree createTestPLan(String inputCSVFile, String domainName, String path, String httpMethod, int threadCount) throws IOException {
+         JMeterUtils.setJMeterHome("target/jmeter");
 
         //import the jmeter properties, as is provided
         JMeterUtils.loadJMeterProperties("target/jmeter/bin/jmeter.properties");
@@ -51,7 +52,7 @@ public class JmeterTestPlan
 
         csvConfig.setProperty("delimiter","\\n");
 
-        csvConfig.setProperty("variableNames","queryParams");
+        csvConfig.setProperty("variableNames",QUERY_PARAMETER_VAR_NAME);
         csvConfig.setProperty("recycle","false");//Reculce input on end of file (set to false)
         csvConfig.setProperty("ignoreFirstLine","false");//Ignore first line of file
         csvConfig.setProperty("stopThread", true);//Stops thread on EOF
@@ -119,7 +120,7 @@ public class JmeterTestPlan
 
         hashTree.add(hashTree.getArray()[0], resultCollector);
 
-        jEngine.configure(hashTree);
+        return hashTree;
     }
 
     public void engineRunner(HashTree hashTree)
