@@ -21,20 +21,19 @@ import org.apache.jmeter.util.JMeterUtils;
 import org.apache.jorphan.collections.HashTree;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class JmeterTestPlan
-{
-    public static  final String QUERY_PARAMETER_VAR_NAME = "queryParams";
+public class JmeterTestPlan {
+    public static final String QUERY_PARAMETER_VAR_NAME = "queryParams";
 
     /**
      * Used to create Jmeter test plan, also saves testplan as a .jmx file
      * in resource folder
      */
     public HashTree createTestPLan(String inputCSVFile, String domainName, String path, String httpMethod, int threadCount) throws IOException {
-         JMeterUtils.setJMeterHome("target/jmeter");
+        JMeterUtils.setJMeterHome("target/jmeter");
 
         //import the jmeter properties, as is provided
         JMeterUtils.loadJMeterProperties("target/jmeter/bin/jmeter.properties");
@@ -46,17 +45,17 @@ public class JmeterTestPlan
 
         //Going to use google.com/search?q='queryParam', load in params from CSV
         CSVDataSet csvConfig = new CSVDataSet();
-        csvConfig.setProperty("filename",inputCSVFile);
+        csvConfig.setProperty("filename", inputCSVFile);
         csvConfig.setComment("List of query params");
         csvConfig.setName("MarshalQueryParams");
 
-        csvConfig.setProperty("delimiter","\\n");
+        csvConfig.setProperty("delimiter", "\\n");
 
-        csvConfig.setProperty("variableNames",QUERY_PARAMETER_VAR_NAME);
-        csvConfig.setProperty("recycle","false");//Reculce input on end of file (set to false)
-        csvConfig.setProperty("ignoreFirstLine","false");//Ignore first line of file
+        csvConfig.setProperty("variableNames", QUERY_PARAMETER_VAR_NAME);
+        csvConfig.setProperty("recycle", "false");//Reculce input on end of file (set to false)
+        csvConfig.setProperty("ignoreFirstLine", "false");//Ignore first line of file
         csvConfig.setProperty("stopThread", true);//Stops thread on EOF
-        csvConfig.setProperty("shareMode","shareMode.thread");
+        csvConfig.setProperty("shareMode", "shareMode.thread");
 
         csvConfig.setProperty(TestElement.TEST_CLASS, CSVDataSet.class.getName());
         csvConfig.setProperty(TestElement.GUI_CLASS, TestBeanGUI.class.getName());
@@ -124,10 +123,9 @@ public class JmeterTestPlan
         return hashTree;
     }
 
-    public void engineRunner(HashTree hashTree)
-    {
+    public void engineRunner(HashTree hashTree) {
         //Create the Jmeter engine to be used (Similar to Android's GUI engine)
-        StandardJMeterEngine jEngine = new  StandardJMeterEngine();
+        StandardJMeterEngine jEngine = new StandardJMeterEngine();
 
         jEngine.configure(hashTree);
 

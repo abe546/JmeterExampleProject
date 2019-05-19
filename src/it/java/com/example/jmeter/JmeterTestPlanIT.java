@@ -5,10 +5,9 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-public class JmeterTestPlanIT
-{
+public class JmeterTestPlanIT {
     String domainName = "google.com";
-    String path = "/search?q="+"${"+ JmeterTestPlan.QUERY_PARAMETER_VAR_NAME+"}";
+    String path = "/search?q=" + "${" + JmeterTestPlan.QUERY_PARAMETER_VAR_NAME + "}";
     String inputCSVFile = "src/it/resources/names.csv";
 
     @Test
