@@ -67,6 +67,7 @@ public class JmeterTestPlan
         httpHandler.setProtocol("https");
         httpHandler.setPath(path);
         httpHandler.setMethod(httpMethod);
+        httpHandler.setFollowRedirects(true);
         httpHandler.setName("GoogleSearch");
 
         //Adding pieces to enable this to be exported to a .jmx and loaded
