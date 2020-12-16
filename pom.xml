@@ -1,0 +1,73 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <groupId>jmeter-example-project</groupId>
+    <artifactId>example-jmeter-with-sdk</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_core -->
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_core</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_components -->
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_components</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_http -->
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_http</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+
+
+   <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+   <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.4</version>
+    </dependency>
+
+    </dependencies>
+
+    <build>
+    <plugins>
+        <!-- mvn com.lazerycode.jmeter:jmeter-maven-plugin:2.9.0:jmeter -->
+    <plugin>
+        <groupId>com.lazerycode.jmeter</groupId>
+        <artifactId>jmeter-maven-plugin</artifactId>
+        <version>2.9.0</version>
+        <executions>
+            <!-- Run JMeter tests -->
+            <execution>
+                <id>jmeter-tests</id>
+                <goals>
+                    <goal>jmeter</goal>
+                </goals>
+            </execution>
+            <!-- Fail build on errors in test -->
+            <execution>
+                <id>jmeter-check-results</id>
+                <goals>
+                    <goal>results</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+    </plugins>
+    </build>
+
+</project>
